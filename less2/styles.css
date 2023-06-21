@@ -1,0 +1,43 @@
+h1 {
+    background: blue;
+}
+h2 {
+    background: purple;
+}
+h3 {
+    background: red;
+}
+.paragraph-1 {
+    background: green;
+    font-size: 24pt;
+    color: brown;
+}
+.paragraph-2 {
+    background: yellow;
+    font-size: 24pt;
+    color: purple;
+    border: 10px, solid, green;
+    border-radius: 10px;
+}
+.paragraph-3 {
+    background: pink;
+    font-size: 24pt;
+    color: white;
+    margin-top: 40px;
+    padding-right: 500px;
+}
+.div-1 {
+    font-size: 32pt;
+    font-weight: 900;
+
+}
+.viki-BMW {
+    font-size: 24px;
+    color: black;
+    text-shadow: green 1.5px 1.5px;
+    font-style: oblique;
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
