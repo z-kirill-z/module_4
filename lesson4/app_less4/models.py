@@ -16,6 +16,7 @@ class Advertisement(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     user = models.ForeignKey(User, verbose_name='пользователь', on_delete=models.CASCADE, default=1)
+    image = models.ImageField('изображение', upload_to="lesson4/")
 
     @admin.display(description='дата создания')
     def created_date(self):
@@ -36,6 +37,14 @@ class Advertisement(models.Model):
                 '<span style="color: purple; font-weight: bold;"> Сегодня в {} </span>', created_time
             )
         return self.updated_at.strftime('%d.%m.%Y в %H:%M:%S')
+
+    @admin.display(description='фото')
+    def get_html_image(self):
+        if self.image:
+            return format_html(
+                '<img src="{url}" style="max-width: 80px; max-height: 80px;"', url=self.image.url
+            )
+
 
     def __str__(self):
         return f"Advertisement(id={self.id}, title={self.title}, price={self.price})"
